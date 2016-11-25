@@ -31,7 +31,7 @@ public class PrimeDigitReplacementsProblem51 {
 		for(int i=0;i<=9;i++)
 		{
 			
-			if(Prime.isPrime((long) replaceInt(x, index1, index2, i)))
+			if(Prime.isPrime((long) replaceInt(x, index1, index2, i))) 
 					count++;
 			
 		}
