@@ -1,4 +1,4 @@
-package projecteuler;
+package com.suryatechsources.projecteuler;
 
 import java.math.BigInteger;
 import java.util.LinkedList;

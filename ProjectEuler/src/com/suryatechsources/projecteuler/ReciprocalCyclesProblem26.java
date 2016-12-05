@@ -1,4 +1,4 @@
-package projecteuler;
+package com.suryatechsources.projecteuler;
 
 public class ReciprocalCyclesProblem26 {
 
