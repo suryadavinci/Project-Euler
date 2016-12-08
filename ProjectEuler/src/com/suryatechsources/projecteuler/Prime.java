@@ -9,6 +9,8 @@ public class Prime {
 		
 		//long x=55;
 		
+		if(x==1)
+			return false;
 		
 		//double y=5.55;
 		
