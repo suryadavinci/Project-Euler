@@ -1,6 +1,6 @@
 package com.suryatechsources.projecteuler;
 
-public class SpiralPrimes2 {
+public class SpiralPrimes2Problem58 {
 
 	public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ package com.suryatechsources.projecteuler;
 
 import java.util.Arrays;
 
-public class SpiralPrimes {
+public class SpiralPrimesProblem58 {
 
 
 	public static void main(String[] args) 
@@ -21,10 +21,10 @@ public class SpiralPrimes {
 		int n=3;
 		int primes=0;
 		float percentage=0, minPercentage=20;
-		System.out.println(SpiralPrimes.countDiagPrimes(SpiralPrimes.getMatrix(n)));
+		System.out.println(SpiralPrimesProblem58.countDiagPrimes(SpiralPrimesProblem58.getMatrix(n)));
 	while(true)
 	{
-	primes=primes+SpiralPrimes.countDiagPrimes(SpiralPrimes.getMatrix(n));
+	primes=primes+SpiralPrimesProblem58.countDiagPrimes(SpiralPrimesProblem58.getMatrix(n));
 	//	primes=SpiralPrimes.countPrimes(SpiralPrimes.getMatrix(n));
 	
 	//System.out.println((float)primes/(n*2-1));
@@ -56,7 +56,7 @@ public class SpiralPrimes {
 		
 		int ind=1;
 		
-		matrix=SpiralPrimes.intialiseMatrix(n);
+		matrix=SpiralPrimesProblem58.intialiseMatrix(n);
 		
 		matrix[n/2][n/2]=count;
 		
