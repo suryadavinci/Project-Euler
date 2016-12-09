@@ -18,14 +18,14 @@ public class SpiralPrimes {
 		
 		
 		//sp.displayMatrix(sp.intialiseMatrix(3));
-		int n=5199;
-		int primes=1291;
+		int n=3;
+		int primes=0;
 		float percentage=0, minPercentage=20;
-		System.out.println(SpiralPrimes.countDiagPrimes(SpiralPrimes.getMatrix(5201)));
+		System.out.println(SpiralPrimes.countDiagPrimes(SpiralPrimes.getMatrix(n)));
 	while(true)
 	{
-	//primes=primes+SpiralPrimes.countDiagPrimes(SpiralPrimes.getMatrix(n));
-		primes=SpiralPrimes.countPrimes(SpiralPrimes.getMatrix(n));
+	primes=primes+SpiralPrimes.countDiagPrimes(SpiralPrimes.getMatrix(n));
+	//	primes=SpiralPrimes.countPrimes(SpiralPrimes.getMatrix(n));
 	
 	//System.out.println((float)primes/(n*2-1));
 	
