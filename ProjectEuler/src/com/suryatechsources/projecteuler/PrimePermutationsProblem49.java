@@ -5,7 +5,7 @@ public class PrimePermutationsProblem49 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		PermutedMultiplesProblem52 pm =new PermutedMultiplesProblem52();
+		Problem52PermutedMultiples pm =new Problem52PermutedMultiples();
 		
 		//System.out.println(pm.isAPermutation(1234, 1324));
 		

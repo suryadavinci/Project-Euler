@@ -2,7 +2,7 @@ package com.suryatechsources.projecteuler;
 
 import java.math.BigInteger;
 
-public class NumbersWithFewRepeatedDigitsProblem172 {
+public class Problem172NumbersWithFewRepeatedDigits {
 	
 	
 	int totalCount=0;
@@ -29,7 +29,7 @@ public class NumbersWithFewRepeatedDigitsProblem172 {
 		
 		System.out.println(x);
 		
-		NumbersWithFewRepeatedDigitsProblem172 solution= new NumbersWithFewRepeatedDigitsProblem172();
+		Problem172NumbersWithFewRepeatedDigits solution= new Problem172NumbersWithFewRepeatedDigits();
 		
 
 		solution.numbersWithFewRepeatedDigits(4,3);

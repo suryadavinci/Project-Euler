@@ -1,6 +1,6 @@
 package com.suryatechsources.projecteuler;
 
-public class ReciprocalCyclesProblem26 {
+public class Problem26ReciprocalCycles {
 
 	public static void main(String[] args) 
 	{

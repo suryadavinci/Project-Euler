@@ -1,6 +1,6 @@
 package com.suryatechsources.projecteuler;
 
-public class LychrelNumbersProblem55 {
+public class Problem55LychrelNumbers {
 
 	
 	

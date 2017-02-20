@@ -1,6 +1,6 @@
 package com.suryatechsources.projecteuler;
 
-public class PrimeDigitReplacementsProblem51 {
+public class Problem51PrimeDigitReplacements {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
