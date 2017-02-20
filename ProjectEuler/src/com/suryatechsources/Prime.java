@@ -1,4 +1,4 @@
-package com.suryatechsources.projecteuler;
+package com.suryatechsources;
 
 
 public class Prime {

@@ -1,4 +1,4 @@
-package com.suryatechsources.projecteuler;
+package com.othersources;
 
 import com.suryatechsources.*;
 import java.math.BigInteger;

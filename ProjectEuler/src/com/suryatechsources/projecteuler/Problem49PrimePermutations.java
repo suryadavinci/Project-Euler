@@ -1,5 +1,7 @@
 package com.suryatechsources.projecteuler;
 
+import com.suryatechsources.Prime;
+
 public class Problem49PrimePermutations {
 
 	public static void main(String[] args) {

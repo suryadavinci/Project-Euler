@@ -1,5 +1,7 @@
 package com.suryatechsources.projecteuler;
 
+import com.suryatechsources.Prime;
+
 public class Problem58SpiralPrimes2 {
 
 	public static void main(String[] args) {

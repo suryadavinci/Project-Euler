@@ -1,5 +1,7 @@
 package com.suryatechsources.projecteuler;
 
+import com.suryatechsources.Prime;
+
 public class Problem51PrimeDigitReplacements {
 
 	public static void main(String[] args) {

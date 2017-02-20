@@ -2,6 +2,8 @@ package com.suryatechsources.projecteuler;
 
 import java.util.Arrays;
 
+import com.suryatechsources.Prime;
+
 public class Problem58SpiralPrimes {
 
 
