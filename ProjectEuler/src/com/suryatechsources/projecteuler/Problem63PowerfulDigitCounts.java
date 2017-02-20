@@ -1,6 +1,6 @@
 package com.suryatechsources.projecteuler;
 
-public class PowerfulDigitCountsProblem63 {
+public class Problem63PowerfulDigitCounts {
 
 	public static void main(String[] args) 
 	{

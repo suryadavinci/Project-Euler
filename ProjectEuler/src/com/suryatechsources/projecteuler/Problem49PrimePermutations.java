@@ -1,6 +1,6 @@
 package com.suryatechsources.projecteuler;
 
-public class PrimePermutationsProblem49 {
+public class Problem49PrimePermutations {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
