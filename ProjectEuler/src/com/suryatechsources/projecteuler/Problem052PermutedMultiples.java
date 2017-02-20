@@ -1,11 +1,11 @@
 package com.suryatechsources.projecteuler;
 
-public class Problem52PermutedMultiples {
+public class Problem052PermutedMultiples {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Problem52PermutedMultiples pm = new Problem52PermutedMultiples();
+		Problem052PermutedMultiples pm = new Problem052PermutedMultiples();
 
 		int flag = 0;
 

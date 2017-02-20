@@ -2,7 +2,7 @@ package com.suryatechsources.projecteuler;
 
 import java.util.LinkedList;
 
-public class Problem61CyclicalFigurateNumbers {
+public class Problem061CyclicalFigurateNumbers {
 	LinkedList<String> triangleList= new LinkedList<String>();
 	LinkedList<String> squareList= new LinkedList<String>();
 	LinkedList<String> pentagonList= new LinkedList<String>();
@@ -30,7 +30,7 @@ public class Problem61CyclicalFigurateNumbers {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub\
-	 new Problem61CyclicalFigurateNumbers();
+	 new Problem061CyclicalFigurateNumbers();
 	 
 	 
 	 
@@ -61,7 +61,7 @@ public class Problem61CyclicalFigurateNumbers {
 	}
 	
 
-	Problem61CyclicalFigurateNumbers()
+	Problem061CyclicalFigurateNumbers()
 	{
 		System.out.println("running constructor");
 		fillList();

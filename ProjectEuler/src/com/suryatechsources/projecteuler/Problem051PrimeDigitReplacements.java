@@ -2,7 +2,7 @@ package com.suryatechsources.projecteuler;
 
 import com.suryatechsources.Prime;
 
-public class Problem51PrimeDigitReplacements {
+public class Problem051PrimeDigitReplacements {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

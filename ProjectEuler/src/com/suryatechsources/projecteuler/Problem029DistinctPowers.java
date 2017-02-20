@@ -3,7 +3,7 @@ package com.suryatechsources.projecteuler;
 import java.math.BigInteger;
 import java.util.LinkedList;
 
-public class Problem29DistinctPowers {
+public class Problem029DistinctPowers {
 	public static void main(String arg[])
 	{
 			LinkedList<String> list= new LinkedList();

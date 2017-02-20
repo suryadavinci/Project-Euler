@@ -2,12 +2,12 @@ package com.suryatechsources.projecteuler;
 
 import com.suryatechsources.Prime;
 
-public class Problem49PrimePermutations {
+public class Problem049PrimePermutations {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Problem52PermutedMultiples pm =new Problem52PermutedMultiples();
+		Problem052PermutedMultiples pm =new Problem052PermutedMultiples();
 		
 		//System.out.println(pm.isAPermutation(1234, 1324));
 		

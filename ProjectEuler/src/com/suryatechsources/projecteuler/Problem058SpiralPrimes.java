@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import com.suryatechsources.Prime;
 
-public class Problem58SpiralPrimes {
+public class Problem058SpiralPrimes {
 
 
 	public static void main(String[] args) 
@@ -23,10 +23,10 @@ public class Problem58SpiralPrimes {
 		int n=3;
 		int primes=0;
 		float percentage=0, minPercentage=20;
-		System.out.println(Problem58SpiralPrimes.countDiagPrimes(Problem58SpiralPrimes.getMatrix(n)));
+		System.out.println(Problem058SpiralPrimes.countDiagPrimes(Problem058SpiralPrimes.getMatrix(n)));
 	while(true)
 	{
-	primes=primes+Problem58SpiralPrimes.countDiagPrimes(Problem58SpiralPrimes.getMatrix(n));
+	primes=primes+Problem058SpiralPrimes.countDiagPrimes(Problem058SpiralPrimes.getMatrix(n));
 	//	primes=SpiralPrimes.countPrimes(SpiralPrimes.getMatrix(n));
 	
 	//System.out.println((float)primes/(n*2-1));
@@ -58,7 +58,7 @@ public class Problem58SpiralPrimes {
 		
 		int ind=1;
 		
-		matrix=Problem58SpiralPrimes.intialiseMatrix(n);
+		matrix=Problem058SpiralPrimes.intialiseMatrix(n);
 		
 		matrix[n/2][n/2]=count;
 		
