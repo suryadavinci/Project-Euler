@@ -10,13 +10,28 @@ import java.util.Scanner;
 
 public class MaximumPathSumIIProblem67 {
 
-	public static void main(String[] args) throws IOException {
+	static int[][] a;
+	static int[][] mem;
+	
+	
+	
+	public static void hackerRankProblem(){
+		
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		
+		
+	}
+	
+	
+	
+	public static void projectEulerProblem(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		File file = new File("p067_triangle.txt");
 
 		Scanner s=new Scanner(file);
 		
-		int[][] a= new int[100][];
+		a= new int[100][];
 		for(int i=0;i<100;i++){
 			
 			a[i]=new int[i+1];
@@ -24,26 +39,47 @@ public class MaximumPathSumIIProblem67 {
 				a[i][j]=s.nextInt();
 			}
 			
-			//System.out.println(Arrays.toString(a[i]));
+			System.out.println(Arrays.toString(a[i]));
 		}
 		
 		
-		int[][] xy=new int[100][];
+		mem=new int[100][100];
 	
 
-		xy=Arrays.copyOf(a, a.length);
-
+		//mem=Arrays.copyOf(a, a.length);
+		
 		for(int i=0;i<100;i++){
-			Arrays.fill(xy[i], -1);
+			Arrays.fill(mem[i], -1);
 
 		}
-		System.out.println(Arrays.toString(xy[99]));
 		
 		s.close();
+		
+		
+		System.out.println(findMaximumPath(0,0));
 
 	}
 	
-	public void findMaximumPath(int row, int col, int[][] mem){
+	public static int findMaximumPath(int row, int col){
+		
+		if(row>=a.length || col>=a.length){
+			//System.out.println("hello");
+			return 0;
+		}
+		else{
+			if(mem[row][col]!=-1)
+			{
+				return mem[row][col];
+			}
+			else
+			{
+				
+				mem[row][col]=a[row][col]+Math.max(findMaximumPath(row+1,col), findMaximumPath(row+1,col+1));
+				//System.out.println(row+" "+col+" "+mem[row][col]);
+				return mem[row][col];
+			}
+		}
+		
 		
 	}
 
