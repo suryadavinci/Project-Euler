@@ -32,8 +32,6 @@ public class Problem052PermutedMultiples {
 				break;
 		}
 
-		
-
 	}
 
 	int[] saveToArray(int num) {
@@ -86,15 +84,13 @@ public class Problem052PermutedMultiples {
 
 		return out;
 	}
-	
-	
-	boolean isAPermutation(int num1, int num2)
-	{
-		
-		if(arrayToString(sort(saveToArray(num1))).equals(arrayToString((sort(saveToArray(num2))))))
-		return true;
-		else		
-		return false;
+
+	boolean isAPermutation(int num1, int num2) {
+
+		if (arrayToString(sort(saveToArray(num1))).equals(arrayToString((sort(saveToArray(num2))))))
+			return true;
+		else
+			return false;
 	}
 
 }

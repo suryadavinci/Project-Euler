@@ -1,29 +1,24 @@
 package com.suryatechsources;
 
-
 import java.math.BigInteger;
 
-
 public class Library {
-	
+
 	// Returns the reverse of the given string.
 	public static String reverse(String s) {
 		return new StringBuilder(s).reverse().toString();
 	}
-	
-	
+
 	// Tests whether the given string is a palindrome.
 	public static boolean isPalindrome(String s) {
 		return s.equals(reverse(s));
 	}
-	
-	
+
 	// Tests whether the given integer is a palindrome in decimal (base 10).
 	public static boolean isPalindrome(int x) {
 		return isPalindrome(Integer.toString(x));
 	}
-	
-	
+
 	// Returns floor(sqrt(x)), for x >= 0.
 	public static int sqrt(int x) {
 		if (x < 0)
@@ -36,8 +31,7 @@ public class Library {
 		}
 		return y;
 	}
-	
-	
+
 	// Returns floor(sqrt(x)), for x >= 0.
 	public static long sqrt(long x) {
 		if (x < 0)
@@ -50,8 +44,7 @@ public class Library {
 		}
 		return y;
 	}
-	
-	
+
 	// Returns floor(sqrt(x)), for x >= 0.
 	public static BigInteger sqrt(BigInteger x) {
 		if (x.signum() == -1)
@@ -64,8 +57,7 @@ public class Library {
 		}
 		return y;
 	}
-	
-	
+
 	// Tests whether x is a perfect square, for any value x.
 	public static boolean isSquare(int x) {
 		if (x < 0)
@@ -73,9 +65,9 @@ public class Library {
 		int y = Library.sqrt(x);
 		return y * y == x;
 	}
-	
-	
-	// Returns x to the power of y, throwing an exception if the result overflows an int.
+
+	// Returns x to the power of y, throwing an exception if the result
+	// overflows an int.
 	public static int pow(int x, int y) {
 		if (x < 0)
 			throw new IllegalArgumentException("Negative base not supported");
@@ -89,8 +81,7 @@ public class Library {
 		}
 		return z;
 	}
-	
-	
+
 	// Returns x^y mod m.
 	public static int powMod(int x, int y, int m) {
 		if (x < 0)
@@ -101,24 +92,24 @@ public class Library {
 			throw new IllegalArgumentException("Modulus must be positive");
 		if (m == 1)
 			return 0;
-		
+
 		// Exponentiation by squaring
 		int z = 1;
 		while (y != 0) {
 			if ((y & 1) != 0)
-				z = (int)((long)z * x % m);
-			x = (int)((long)x * x % m);
+				z = (int) ((long) z * x % m);
+			x = (int) ((long) x * x % m);
 			y >>>= 1;
 		}
 		return z;
 	}
-	
-	
-	// Returns x^-1 mod m, where the result is in the range [0, m). Note that (x * x^-1) mod m = (x^-1 * x) mod m = 1.
+
+	// Returns x^-1 mod m, where the result is in the range [0, m). Note that (x
+	// * x^-1) mod m = (x^-1 * x) mod m = 1.
 	public static int reciprocalMod(int x, int m) {
 		if (!(m > 0 && 0 <= x && x < m))
 			throw new IllegalArgumentException();
-		
+
 		// Based on a simplification of the extended Euclidean algorithm
 		int y = x;
 		x = m;
@@ -137,8 +128,7 @@ public class Library {
 		else
 			throw new IllegalArgumentException("Reciprocal does not exist");
 	}
-	
-	
+
 	// Returns n!.
 	public static BigInteger factorial(int n) {
 		if (n < 0)
@@ -148,8 +138,7 @@ public class Library {
 			prod = prod.multiply(BigInteger.valueOf(i));
 		return prod;
 	}
-	
-	
+
 	// Returns n choose k.
 	public static BigInteger binomial(int n, int k) {
 		if (k < 0 || k > n)
@@ -159,8 +148,7 @@ public class Library {
 			product = product.multiply(BigInteger.valueOf(n - i));
 		return product.divide(factorial(k));
 	}
-	
-	
+
 	// Returns the largest non-negative integer that divides both x and y.
 	public static int gcd(int x, int y) {
 		if (x < 0 || y < 0)
@@ -172,8 +160,7 @@ public class Library {
 		}
 		return x;
 	}
-	
-	
+
 	// Tests whether the given integer is prime.
 	public static boolean isPrime(int x) {
 		if (x < 0)
@@ -192,11 +179,13 @@ public class Library {
 			return true;
 		}
 	}
-	
-	
-	// Returns a Boolean array 'isPrime' where isPrime[i] indicates whether i is prime, for 0 <= i <= n.
-	// For a large batch of queries, this is faster than calling isPrime() for each integer.
-	// For example: listPrimality(100) = {false, false, true, true, false, true, false, true, false, false, ...} (array length 101).
+
+	// Returns a Boolean array 'isPrime' where isPrime[i] indicates whether i is
+	// prime, for 0 <= i <= n.
+	// For a large batch of queries, this is faster than calling isPrime() for
+	// each integer.
+	// For example: listPrimality(100) = {false, false, true, true, false, true,
+	// false, true, false, false, ...} (array length 101).
 	public static boolean[] listPrimality(int n) {
 		if (n < 0)
 			throw new IllegalArgumentException("Negative array size");
@@ -215,10 +204,11 @@ public class Library {
 		}
 		return result;
 	}
-	
-	
-	// Returns all the prime numbers less than or equal to n, in ascending order.
-	// For example: listPrimes(97) = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ..., 83, 89, 97}.
+
+	// Returns all the prime numbers less than or equal to n, in ascending
+	// order.
+	// For example: listPrimes(97) = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...,
+	// 83, 89, 97}.
 	public static int[] listPrimes(int n) {
 		boolean[] isprime = listPrimality(n);
 		int count = 0;
@@ -226,7 +216,7 @@ public class Library {
 			if (b)
 				count++;
 		}
-		
+
 		int[] result = new int[count];
 		for (int i = 0, j = 0; i < isprime.length; i++) {
 			if (isprime[i]) {
@@ -236,10 +226,11 @@ public class Library {
 		}
 		return result;
 	}
-	
-	
-	// Returns an array spf where spf[k] is the smallest prime factor of k, valid for 0 <= k <= n.
-	// For example: listSmallestPrimeFactors(10) = {0, 0, 2, 3, 2, 5, 2, 7, 2, 3, 2}.
+
+	// Returns an array spf where spf[k] is the smallest prime factor of k,
+	// valid for 0 <= k <= n.
+	// For example: listSmallestPrimeFactors(10) = {0, 0, 2, 3, 2, 5, 2, 7, 2,
+	// 3, 2}.
 	public static int[] listSmallestPrimeFactors(int n) {
 		int[] result = new int[n + 1];
 		int limit = sqrt(n);
@@ -256,16 +247,18 @@ public class Library {
 		}
 		return result;
 	}
-	
-	
-	// Returns the number of integers in the range [1, n] that are coprime with n.
-	// For example, totient(12) = 4 because these integers are coprime with 12: 1, 5, 7, 11.
+
+	// Returns the number of integers in the range [1, n] that are coprime with
+	// n.
+	// For example, totient(12) = 4 because these integers are coprime with 12:
+	// 1, 5, 7, 11.
 	public static int totient(int n) {
 		if (n <= 0)
 			throw new IllegalArgumentException("Totient of non-positive integer");
 		int p = 1;
-		for (int i = 2, end = Library.sqrt(n); i <= end; i++) {  // Trial division
-			if (n % i == 0) {  // Found a factor
+		for (int i = 2, end = Library.sqrt(n); i <= end; i++) { // Trial
+																// division
+			if (n % i == 0) { // Found a factor
 				p *= i - 1;
 				n /= i;
 				while (n % i == 0) {
@@ -279,35 +272,39 @@ public class Library {
 			p *= n - 1;
 		return p;
 	}
-	
-	
-	// Returns an array 'totients' where totients[i] == totient(i), for 0 <= i <= n.
-	// For a large batch of queries, this is faster than calling totient() for each integer.
+
+	// Returns an array 'totients' where totients[i] == totient(i), for 0 <= i
+	// <= n.
+	// For a large batch of queries, this is faster than calling totient() for
+	// each integer.
 	public static int[] listTotients(int n) {
 		if (n < 0)
 			throw new IllegalArgumentException("Negative array size");
 		int[] totients = new int[n + 1];
 		for (int i = 0; i <= n; i++)
 			totients[i] = i;
-		
+
 		for (int i = 2; i <= n; i++) {
-			if (totients[i] == i) {  // i is prime
+			if (totients[i] == i) { // i is prime
 				for (int j = i; j <= n; j += i)
 					totients[j] -= totients[j] / i;
 			}
 		}
 		return totients;
 	}
-	
-	
-	// Advances the given sequence to the next permutation and returns whether a permutation was performed.
-	// If no permutation was performed, then the input state was already the last possible permutation (a non-ascending sequence).
+
+	// Advances the given sequence to the next permutation and returns whether a
+	// permutation was performed.
+	// If no permutation was performed, then the input state was already the
+	// last possible permutation (a non-ascending sequence).
 	// For example:
-	// - nextPermutation({0,0,1}) changes the argument array to {0,1,0} and returns true.
-	// - nextPermutation({1,0,0}) leaves the argument array unchanged and returns false.
+	// - nextPermutation({0,0,1}) changes the argument array to {0,1,0} and
+	// returns true.
+	// - nextPermutation({1,0,0}) leaves the argument array unchanged and
+	// returns false.
 	public static boolean nextPermutation(int[] a) {
 		int n = a.length, i, j;
-		for (i = n - 2; ; i--) {
+		for (i = n - 2;; i--) {
 			if (i < 0)
 				return false;
 			if (a[i] < a[i + 1])
@@ -318,28 +315,26 @@ public class Library {
 			a[i + j] = a[n - j];
 			a[n - j] = tp;
 		}
-		for (j = i + 1; a[j] <= a[i]; j++);
+		for (j = i + 1; a[j] <= a[i]; j++)
+			;
 		int tp = a[i];
 		a[i] = a[j];
 		a[j] = tp;
 		return true;
 	}
-	
+
 }
-
-
 
 // Immutable unlimited precision fraction
 final class Fraction implements Comparable<Fraction> {
-	
-	public final BigInteger numerator;    // Always coprime with denominator
-	public final BigInteger denominator;  // Always positive
-	
-	
+
+	public final BigInteger numerator; // Always coprime with denominator
+	public final BigInteger denominator; // Always positive
+
 	public Fraction(BigInteger numer, BigInteger denom) {
 		if (denom.signum() == 0)
 			throw new ArithmeticException("Division by zero");
-		
+
 		// Reduce to canonical form
 		if (denom.signum() == -1) {
 			numer = numer.negate();
@@ -350,52 +345,46 @@ final class Fraction implements Comparable<Fraction> {
 			numer = numer.divide(gcd);
 			denom = denom.divide(gcd);
 		}
-		
+
 		numerator = numer;
 		denominator = denom;
 	}
-	
-	
+
 	public Fraction add(Fraction other) {
-		return new Fraction(numerator.multiply(other.denominator).add(other.numerator.multiply(denominator)), denominator.multiply(other.denominator));
+		return new Fraction(numerator.multiply(other.denominator).add(other.numerator.multiply(denominator)),
+				denominator.multiply(other.denominator));
 	}
-	
-	
+
 	public Fraction subtract(Fraction other) {
-		return new Fraction(numerator.multiply(other.denominator).subtract(other.numerator.multiply(denominator)), denominator.multiply(other.denominator));
+		return new Fraction(numerator.multiply(other.denominator).subtract(other.numerator.multiply(denominator)),
+				denominator.multiply(other.denominator));
 	}
-	
-	
+
 	public Fraction multiply(Fraction other) {
 		return new Fraction(numerator.multiply(other.numerator), denominator.multiply(other.denominator));
 	}
-	
-	
+
 	public Fraction divide(Fraction other) {
 		return new Fraction(numerator.multiply(other.denominator), denominator.multiply(other.numerator));
 	}
-	
-	
+
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Fraction))
 			return false;
-		Fraction other = (Fraction)obj;
+		Fraction other = (Fraction) obj;
 		return numerator.equals(other.numerator) && denominator.equals(other.denominator);
 	}
-	
-	
+
 	public int compareTo(Fraction other) {
 		return numerator.multiply(other.denominator).compareTo(other.numerator.multiply(denominator));
 	}
-	
-	
+
 	public int hashCode() {
 		return numerator.hashCode() + denominator.hashCode();
 	}
-	
-	
+
 	public String toString() {
 		return numerator + "/" + denominator;
 	}
-	
+
 }
