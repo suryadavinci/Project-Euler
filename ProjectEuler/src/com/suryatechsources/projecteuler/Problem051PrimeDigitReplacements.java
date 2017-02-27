@@ -1,5 +1,7 @@
 package com.suryatechsources.projecteuler;
 
+import java.util.Arrays;
+
 import com.suryatechsources.Prime;
 
 public class Problem051PrimeDigitReplacements {
@@ -7,30 +9,78 @@ public class Problem051PrimeDigitReplacements {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println(replaceInt(12345, 1, 2, 5));
 
+		doPrimeDigitReplacement();
+
+		
 	}
 
-	public static int replaceInt(int x, int index1, int index2, int replacementDigit) {
-		char[] replacedString = Integer.toString(x).toCharArray();
+	
+	
+	public static void doPrimeDigitReplacement(){
+		
+		String str;
+		int count=0;
+		int n=56003;
+		for( n=896979; ;n+=2)
+		{
+			count=0;
+			str=Integer.toString(n);
+			for(int i=0;i<str.length();i++){
 
-		replacedString[index1] = (char) (replacementDigit + 48);
-		replacedString[index2] = (char) (replacementDigit + 48);
-		return Integer.parseInt(String.valueOf(replacedString));
+				for(int j=i+1;j<str.length();j++){
+					
+					if(i!=j){
+						
+						count=getPrimeCount(str,i,j);
+						
+						if(count>=7)
+						{
+							System.out.println("count for "+str+" "+i+" "+j+" is "+count);
+							//break;
+							if(count==8)
+								System.exit(0);
+								
+						}
 
-	}
-
-	public static int primeCount(int x, int index1, int index2) {
-		int count = 0;
-		for (int i = 0; i <= 9; i++) {
-
-			if (Prime.isPrime((long) replaceInt(x, index1, index2, i)))
-				count++;
-
+					}
+				}
+				
+			}
+				
+				
 		}
-
-		return count;
-
 	}
 
+
+
+	private static int getPrimeCount(String str, int i, int j) {
+		
+		char[] newStr= str.toCharArray();
+		
+		Integer newInt;
+		int count=0;
+		
+		//if(i!=0  && j!=newStr.length-1)
+		{
+		
+		for(int k=0;k<=9;k++){
+				if(j==newStr.length-1 && (k%2)==0){
+					k++;
+				}
+			newStr[i]= (char) (k+48);
+			newStr[j]= (char) (k+48);
+			newInt= Integer.parseInt(String.valueOf(newStr));
+			if(Prime.isPrime(newInt)){
+				
+				//System.out.println("replacing "+String.copyValueOf(newStr)+" "+i+" "+j+" by "+k+" prime Int "+newInt);
+
+				count++;
+			}
+		}
+		}
+		return count;
+	}
+	
+		
 }
