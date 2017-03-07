@@ -49,15 +49,14 @@ public class Problem092SquareDigitChains {
 		}
 		return sum;
 	}
-	
-	
-	public static int[] sumOfDigits(int n){
+
+	public static int[] sumOfDigits(int n) {
 		int sum[] = new int[2];
-		sum[0]=0;
-		sum[1]=0;
+		sum[0] = 0;
+		sum[1] = 0;
 		while (n != 0) {
 			sum[0] = sum[0] + ((n % 10) * (n % 10));
-			sum[1] =sum[1]+n%10;
+			sum[1] = sum[1] + n % 10;
 			n = n / 10;
 		}
 		return sum;

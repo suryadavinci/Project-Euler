@@ -41,7 +41,7 @@ public class Problem092SquareDigitChains {
 			}
 		}
 		System.out.println(count);
-		System.out.println((System.currentTimeMillis() - start)/1000+"s");
+		System.out.println((System.currentTimeMillis() - start) / 1000 + "s");
 	}
 
 	public static int sumOfSquares(int n) {
