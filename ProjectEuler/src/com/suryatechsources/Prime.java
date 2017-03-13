@@ -8,8 +8,18 @@ import java.util.Set;
 public class Prime {
 
 	public static void main(String[] args) {
-
-		System.out.println(generatePrimeSet(100));
+		long start =System.currentTimeMillis();
+		int n=100000;
+		generatePrimeSet(n);
+		long first =System.currentTimeMillis();
+		System.out.println("Hash "+(first-start));
+		for(int i=0;i<n;i++){
+			//if(isPrime(i))
+				//System.out.println(i);
+			isPrime(i);
+		}
+		long second =System.currentTimeMillis();
+		System.out.println("Formulae "+(second-first));
 
 	}
 
@@ -42,25 +52,21 @@ public class Prime {
 
 		// long x=55;
 
-		if (x == 1)
+		if (x <= 1)
 			return false;
 
-		// double y=5.55;
-
-		// System.out.println(Math.sqrt(x)+1);
-
-		for (long i = 2; i < Math.sqrt(x) + 1; i++) {
-			if (x == 2) {
-				// System.out.println("prime");
-				return true;
-
-			} else if (x % i == 0) {
-				// System.out.println("not prime");
+		if (x==2 || x==3)
+			return true;
+		
+		if(x%2==0 || x%3==0)
+			return false;
+		
+		for (long i = 5; i*i < x + 1; i+=6) {
+			if (x % i == 0 || x % (i+2) ==0) {
 				return false;
 			}
 
 		}
-		// System.out.println("prime");
 		return true;
 
 	}
