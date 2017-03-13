@@ -6,25 +6,20 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Prime {
-
 	public static void main(String[] args) {
-		long start =System.currentTimeMillis();
-		int n=100000;
+		long start = System.currentTimeMillis();
+		int n = 100000;
 		generatePrimeSet(n);
-		long first =System.currentTimeMillis();
-		System.out.println("Hash "+(first-start));
-		for(int i=0;i<n;i++){
-			//if(isPrime(i))
-				//System.out.println(i);
+		long first = System.currentTimeMillis();
+		System.out.println("Hash " + (first - start));
+		for (int i = 0; i < n; i++) {
 			isPrime(i);
 		}
-		long second =System.currentTimeMillis();
-		System.out.println("Formulae "+(second-first));
-
+		long second = System.currentTimeMillis();
+		System.out.println("Formulae " + (second - first));
 	}
 
 	static ArrayList<Integer> primeList = new ArrayList<Integer>();
-
 	static {
 		primeList.add(2);
 		primeList.add(3);
@@ -43,32 +38,21 @@ public class Prime {
 			if (!isNotPrime)
 				primeList.add(i);
 		}
-
 		return primeList;
 	}
 
 	public static boolean isPrime(long x) {
-		// TODO Auto-generated method stub
-
-		// long x=55;
-
 		if (x <= 1)
 			return false;
-
-		if (x==2 || x==3)
+		if (x == 2 || x == 3)
 			return true;
-		
-		if(x%2==0 || x%3==0)
+		if (x % 2 == 0 || x % 3 == 0)
 			return false;
-		
-		for (long i = 5; i*i < x + 1; i+=6) {
-			if (x % i == 0 || x % (i+2) ==0) {
+		for (long i = 5; i * i < x + 1; i += 6) {
+			if (x % i == 0 || x % (i + 2) == 0) {
 				return false;
 			}
-
 		}
 		return true;
-
 	}
-
 }
