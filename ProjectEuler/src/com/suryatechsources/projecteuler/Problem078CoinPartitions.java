@@ -10,8 +10,7 @@ public class Problem078CoinPartitions {
 		BigInteger output;
 		BigInteger div = new BigInteger("1000000");
 		while (true) {
-			System.out
-					.println(i
+			System.out.println(i
 							+ " "
 							+ (output = Problem076CountingSummations
 									.countSumBig(i, 0)));
@@ -20,11 +19,8 @@ public class Problem078CoinPartitions {
 				break;
 			}
 			i++;
-
 		}
-
 		System.out.println("Time Taken : "
 				+ (System.currentTimeMillis() - start));
 	}
-
 }
