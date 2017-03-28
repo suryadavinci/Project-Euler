@@ -12,7 +12,8 @@ public class Problem076CountingSummations {
 		long start = System.currentTimeMillis();
 		int i = 1;
 		long output;
-		System.out.println(100 + " " + (output = countSum(100, 0)));
+		for( i=0;i<10;i++)
+			System.out.println(i+ " " + (output = countSum(i, 0)));
 		System.out.println("Time Taken : "
 				+ (System.currentTimeMillis() - start));
 	}
