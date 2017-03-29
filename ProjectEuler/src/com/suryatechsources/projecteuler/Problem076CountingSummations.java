@@ -12,9 +12,10 @@ public class Problem076CountingSummations {
 		long start = System.currentTimeMillis();
 		int i = 1;
 		long output;
-		for (i = 0; i < 10; i++)
-			System.out.println(i + " " + (output = countSum(i, 0)));
-		System.out.println("Time Taken : " + (System.currentTimeMillis() - start));
+		for( i=0;i<100;i++)
+			System.out.println(i+ " " + (output = countSum(i, 0)));
+		System.out.println("Time Taken : "
+				+ (System.currentTimeMillis() - start));
 	}
 
 	public static long countSum(int sum, int minimal) {
