@@ -26,9 +26,11 @@ public class Problem049PrimePermutations {
 					// System.out.println(Prime.isPrime(i+j));
 					// System.out.println(Prime.isPrime(i+2*j));
 
-					if (pm.isAPermutation(i, i + j) & pm.isAPermutation(i, i + 2 * j)) {
+					if (pm.isAPermutation(i, i + j)
+							& pm.isAPermutation(i, i + 2 * j)) {
 						if (Prime.isPrime(i + j) & Prime.isPrime(i + 2 * j))
-							System.out.println(i + " " + (i + j) + " " + (i + 2 * j));
+							System.out.println(i + " " + (i + j) + " "
+									+ (i + 2 * j));
 					}
 
 				}

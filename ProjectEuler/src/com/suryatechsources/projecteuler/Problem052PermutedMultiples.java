@@ -87,7 +87,8 @@ public class Problem052PermutedMultiples {
 
 	boolean isAPermutation(int num1, int num2) {
 
-		if (arrayToString(sort(saveToArray(num1))).equals(arrayToString((sort(saveToArray(num2))))))
+		if (arrayToString(sort(saveToArray(num1))).equals(
+				arrayToString((sort(saveToArray(num2))))))
 			return true;
 		else
 			return false;

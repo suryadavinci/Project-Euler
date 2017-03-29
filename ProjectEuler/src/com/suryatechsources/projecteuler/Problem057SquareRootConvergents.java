@@ -28,7 +28,8 @@ public class Problem057SquareRootConvergents {
 			if ((nr[i].toString()).length() > (dr[i].toString()).length()) {
 				count++;
 
-				System.out.println(i + 1 + " " + nr[i].toString() + " " + dr[i].toString());
+				System.out.println(i + 1 + " " + nr[i].toString() + " "
+						+ dr[i].toString());
 
 			}
 

@@ -30,7 +30,8 @@ public class Problem051PrimeDigitReplacements {
 						count = getPrimeCount(str, i, j);
 
 						if (count >= 7) {
-							System.out.println("count for " + str + " " + i + " " + j + " is " + count);
+							System.out.println("count for " + str + " " + i
+									+ " " + j + " is " + count);
 							// break;
 							if (count == 8)
 								System.exit(0);

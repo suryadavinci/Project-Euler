@@ -18,9 +18,13 @@ public class Problem058SpiralPrimes {
 		int n = 3;
 		int primes = 0;
 		float percentage = 0, minPercentage = 20;
-		System.out.println(Problem058SpiralPrimes.countDiagPrimes(Problem058SpiralPrimes.getMatrix(n)));
+		System.out.println(Problem058SpiralPrimes
+				.countDiagPrimes(Problem058SpiralPrimes.getMatrix(n)));
 		while (true) {
-			primes = primes + Problem058SpiralPrimes.countDiagPrimes(Problem058SpiralPrimes.getMatrix(n));
+			primes = primes
+					+ Problem058SpiralPrimes
+							.countDiagPrimes(Problem058SpiralPrimes
+									.getMatrix(n));
 			// primes=SpiralPrimes.countPrimes(SpiralPrimes.getMatrix(n));
 
 			// System.out.println((float)primes/(n*2-1));

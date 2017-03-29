@@ -39,7 +39,8 @@ public class Problem026ReciprocalCycles {
 
 					if (length > maxLength) {
 						maxLength = length;
-						System.out.println("MaxCycle : value : " + i + " " + output + " MaxLength :" + length);
+						System.out.println("MaxCycle : value : " + i + " "
+								+ output + " MaxLength :" + length);
 					}
 
 					break;
@@ -53,7 +54,8 @@ public class Problem026ReciprocalCycles {
 
 		}
 
-		System.out.println("MaxCycle : value : " + i + " " + output + " MaxLength :" + length);
+		System.out.println("MaxCycle : value : " + i + " " + output
+				+ " MaxLength :" + length);
 
 	}
 

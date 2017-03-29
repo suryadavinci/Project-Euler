@@ -83,7 +83,8 @@ public final class p172 {
 	 * zero, hence we multiply by 9/10 to get the final answer.
 	 */
 	public String run() {
-		BigInteger ways = partitionAndCount(LENGTH, MAX_COUNT, new ArrayList<Integer>());
+		BigInteger ways = partitionAndCount(LENGTH, MAX_COUNT,
+				new ArrayList<Integer>());
 
 		// Multiply by (base - 1) / base to discount sequences with leading
 		// zeros

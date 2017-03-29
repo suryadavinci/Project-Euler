@@ -18,12 +18,13 @@ public class Problem063PowerfulDigitCounts {
 				if (n * Math.log10(a) >= (n - 1) & n * Math.log10(a) < n) {
 					count++;
 					// System.out.println("Success : "+a+" "+n);
-					System.out.println(count + " " + a + " " + n + " " + n * Math.log10(a) + " " + n * Math.log10(a));
+					System.out.println(count + " " + a + " " + n + " " + n
+							* Math.log10(a) + " " + n * Math.log10(a));
 				}
 				if (n * Math.log10(a) > n) {
 					// count++;
-					System.out.println(
-							count + " fail " + a + " " + n + " " + n * Math.log10(a) + " " + n * Math.log10(a));
+					System.out.println(count + " fail " + a + " " + n + " " + n
+							* Math.log10(a) + " " + n * Math.log10(a));
 					break;
 				}
 

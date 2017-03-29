@@ -73,7 +73,8 @@ public class Problem067MaximumPathSumII {
 			} else {
 
 				mem[row][col] = a[row][col]
-						+ Math.max(findMaximumPath(row + 1, col), findMaximumPath(row + 1, col + 1));
+						+ Math.max(findMaximumPath(row + 1, col),
+								findMaximumPath(row + 1, col + 1));
 				// System.out.println(row+" "+col+" "+mem[row][col]);
 				return mem[row][col];
 			}

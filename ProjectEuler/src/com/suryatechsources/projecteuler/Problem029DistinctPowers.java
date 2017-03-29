@@ -21,7 +21,8 @@ public class Problem029DistinctPowers {
 				if (!list.contains(output.toString())) {
 					list.add(output.toString());
 					count++;
-					System.out.println(count + " " + i + " " + j + " " + output);
+					System.out
+							.println(count + " " + i + " " + j + " " + output);
 
 				}
 

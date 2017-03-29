@@ -20,9 +20,11 @@ public class Problem055LychrelNumbers {
 				while (iter < 50) {
 					// System.out.println(currentSum);
 
-					currentSum = currentSum + Long.parseLong(reverse(Long.toString(currentSum)));
+					currentSum = currentSum
+							+ Long.parseLong(reverse(Long.toString(currentSum)));
 					if (isPalindrome(Long.toString(currentSum))) {
-						System.out.println(count + " " + iter + " " + i + " " + currentSum);
+						System.out.println(count + " " + iter + " " + i + " "
+								+ currentSum);
 						break;
 					}
 

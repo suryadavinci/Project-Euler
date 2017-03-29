@@ -87,7 +87,8 @@ public class Library {
 		if (x < 0)
 			throw new IllegalArgumentException("Negative base not supported");
 		if (y < 0)
-			throw new IllegalArgumentException("Modular reciprocal not supported");
+			throw new IllegalArgumentException(
+					"Modular reciprocal not supported");
 		if (m <= 0)
 			throw new IllegalArgumentException("Modulus must be positive");
 		if (m == 1)
@@ -254,7 +255,8 @@ public class Library {
 	// 1, 5, 7, 11.
 	public static int totient(int n) {
 		if (n <= 0)
-			throw new IllegalArgumentException("Totient of non-positive integer");
+			throw new IllegalArgumentException(
+					"Totient of non-positive integer");
 		int p = 1;
 		for (int i = 2, end = Library.sqrt(n); i <= end; i++) { // Trial
 																// division
@@ -351,32 +353,38 @@ final class Fraction implements Comparable<Fraction> {
 	}
 
 	public Fraction add(Fraction other) {
-		return new Fraction(numerator.multiply(other.denominator).add(other.numerator.multiply(denominator)),
+		return new Fraction(numerator.multiply(other.denominator).add(
+				other.numerator.multiply(denominator)),
 				denominator.multiply(other.denominator));
 	}
 
 	public Fraction subtract(Fraction other) {
-		return new Fraction(numerator.multiply(other.denominator).subtract(other.numerator.multiply(denominator)),
+		return new Fraction(numerator.multiply(other.denominator).subtract(
+				other.numerator.multiply(denominator)),
 				denominator.multiply(other.denominator));
 	}
 
 	public Fraction multiply(Fraction other) {
-		return new Fraction(numerator.multiply(other.numerator), denominator.multiply(other.denominator));
+		return new Fraction(numerator.multiply(other.numerator),
+				denominator.multiply(other.denominator));
 	}
 
 	public Fraction divide(Fraction other) {
-		return new Fraction(numerator.multiply(other.denominator), denominator.multiply(other.numerator));
+		return new Fraction(numerator.multiply(other.denominator),
+				denominator.multiply(other.numerator));
 	}
 
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Fraction))
 			return false;
 		Fraction other = (Fraction) obj;
-		return numerator.equals(other.numerator) && denominator.equals(other.denominator);
+		return numerator.equals(other.numerator)
+				&& denominator.equals(other.denominator);
 	}
 
 	public int compareTo(Fraction other) {
-		return numerator.multiply(other.denominator).compareTo(other.numerator.multiply(denominator));
+		return numerator.multiply(other.denominator).compareTo(
+				other.numerator.multiply(denominator));
 	}
 
 	public int hashCode() {

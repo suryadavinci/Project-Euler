@@ -29,7 +29,7 @@ public class Prime {
 		boolean isNotPrime;
 		for (int i = 5; i < n; i += 2) {
 			isNotPrime = false;
-			for (int j = 0; j < primeList.size(); j++) {
+			for (int j = 0; j < primeList.size() && j <= Math.sqrt(i); j++) {
 				if (i % primeList.get(j) == 0) {
 					isNotPrime = true;
 					break;

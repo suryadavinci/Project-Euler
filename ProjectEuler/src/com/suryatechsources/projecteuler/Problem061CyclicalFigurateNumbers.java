@@ -75,8 +75,8 @@ public class Problem061CyclicalFigurateNumbers {
 
 				for (int j = 0; j < ((LinkedList) sourceList.get(i)).size(); j++) {
 					// System.out.println();
-					if (((String) ((LinkedList) (sourceList.get(i))).get(j)).substring(0, 2)
-							.equals(current.substring(2))) {
+					if (((String) ((LinkedList) (sourceList.get(i))).get(j))
+							.substring(0, 2).equals(current.substring(2))) {
 						next = i;
 						return;
 
@@ -87,8 +87,9 @@ public class Problem061CyclicalFigurateNumbers {
 			}
 		}
 		next = 7;
-		System.out.println(next + " " + flag[0] + " " + flag[1] + " " + flag[2] + " " + flag[3] + " " + flag[4] + " "
-				+ flag[5] + " " + finalList);
+		System.out.println(next + " " + flag[0] + " " + flag[1] + " " + flag[2]
+				+ " " + flag[3] + " " + flag[4] + " " + flag[5] + " "
+				+ finalList);
 
 	}
 
@@ -160,7 +161,8 @@ public class Problem061CyclicalFigurateNumbers {
 		for (int i = 0; i < pentagonList.size(); i++) {
 			flag = currentFlag;
 			finalList = tempList;
-			if (current.substring(2).equals(pentagonList.get(i).substring(0, 2))) {
+			if (current.substring(2)
+					.equals(pentagonList.get(i).substring(0, 2))) {
 				finalList.add(pentagonList.get(i));
 				flag[2] = 1;
 				getNext(squareList.get(i));
@@ -202,7 +204,8 @@ public class Problem061CyclicalFigurateNumbers {
 		for (int i = 0; i < heptagonList.size(); i++) {
 			flag = currentFlag;
 			finalList = tempList;
-			if (current.substring(2).equals(heptagonList.get(i).substring(0, 2))) {
+			if (current.substring(2)
+					.equals(heptagonList.get(i).substring(0, 2))) {
 				finalList.add(heptagonList.get(i));
 				flag[4] = 1;
 				getNext(squareList.get(i));
