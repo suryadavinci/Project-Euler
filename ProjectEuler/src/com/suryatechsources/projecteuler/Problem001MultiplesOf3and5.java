@@ -10,7 +10,8 @@ public class Problem001MultiplesOf3and5 {
 		long output = 0;
 		for (int a0 = 0; a0 < t; a0++) {
 			long n = in.nextInt();
-			// output=getSum(n);
+			 output=getSum(n);
+			 System.out.println(output);
 			output = getSumUsingSummation(n);
 			System.out.println(output);
 
